@@ -29,7 +29,7 @@ void loop() {
 
   if (distance < activationDistance) {
     for (int i=1; i<=4; i++) {
-      delayAmount = 500 - i * 50;
+      delayAmount = 500 - i * 50 + random(-50, 50);
       relay.turn_on_channel(i);
       delay(delayAmount);
     }
@@ -51,13 +51,13 @@ void loop() {
 
 void fadeUp() {
   for (int i=1; i<=4; i++) {
-    delayAmount = 300 - i * 50;
+    delayAmount = 300 - i * 50 + random(-50, 50);
     relay.turn_off_channel(i);
     delay(delayAmount);
   }
 
   for (int i=1; i<=4; i++) {
-    delayAmount = 300 - i * 50;
+    delayAmount = 300 - i * 50 + random(-50, 50);
     relay.turn_on_channel(i);
     delay(delayAmount);
   }
