@@ -15,7 +15,7 @@ int activationDistance = 30;
 
 void setup() {
   Serial.begin(9600);
-  relay.begin(0x11);
+  relay.begin();
   randomSeed(analogRead(0));
   pinMode(trigPin, OUTPUT);
 }
